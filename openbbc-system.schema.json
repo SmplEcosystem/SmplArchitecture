@@ -2,6 +2,9 @@
   "$schema": "http://json-schema.org/draft-07/schema#",
   "type": "object",
   "properties": {
+    "$schema": {
+      "type": "string"
+    },
     "name": {
       "type": "string"
     },
@@ -16,6 +19,7 @@
       }
     }
   },
+  "required": ["$schema", "name", "modules"],
   "definitions": {
     "module": {
       "type": "object",
@@ -26,8 +30,21 @@
         "description": {
           "type": "string"
         },
-        "archDoc": {
-
+        "relativePath": {
+          "type": "string"
+        },
+        "moduleDependencies": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "$ref": "#/definitions/module"
+          }
+        },
+        "functionalStatements": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
         }
       }
     }
