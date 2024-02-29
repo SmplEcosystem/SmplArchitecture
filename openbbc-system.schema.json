@@ -3,7 +3,10 @@
   "type": "object",
   "properties": {
     "$schema": {
-      "type": "string"
+      "type": "string",
+      "enum": [
+        "https://smplecosystem.github.io/SmplArchitecture/openbbc-system.schema.json"
+      ]
     },
     "name": {
       "type": "string"
