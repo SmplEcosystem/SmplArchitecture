@@ -38,6 +38,28 @@
     "class": {
       "type": "object",
       "properties": {
+        "implements": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "$ref": {
+                "type": "string"
+              }
+            }
+          }
+        },
+        "extends": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "$ref": {
+                "type": "string"
+              }
+            }
+          }
+        },
         "properties": {
           "type": "object",
           "additionalProperties": {
@@ -54,7 +76,67 @@
         }
       }
     },
-    "function": {},
-    "variable": {}
+    "function": {
+      "type": "object",
+      "properties": {
+        "modifiers": {
+          "$ref": "#/definitions/modifier"
+        },
+        "returnTypes": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "$ref": {
+                "type": "string"
+              }
+            }
+          }
+        },
+        "arguments": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "$ref": {
+                "type": "string"
+              },
+              "name": {
+                "type": "string"
+              }
+            }
+          }
+        },
+        "assertions": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "variable": {
+      "type": "object",
+      "properties": {
+        "modifiers": {
+          "$ref": "#/definitions/modifier"
+        }
+      }
+    },
+    "modifier": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": [
+          "public",
+          "private",
+          "readonly",
+          "protected",
+          "static",
+          "async",
+          "abstract"
+        ]
+      }
+    }
   }
 }
