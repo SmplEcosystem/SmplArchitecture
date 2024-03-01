@@ -40,24 +40,16 @@
       "properties": {
         "implements": {
           "type": "array",
+          "format": "uri-reference",
           "items": {
-            "type": "object",
-            "properties": {
-              "$ref": {
-                "type": "string"
-              }
-            }
+            "type": "string"
           }
         },
         "extends": {
           "type": "array",
           "items": {
-            "type": "object",
-            "properties": {
-              "$ref": {
-                "type": "string"
-              }
-            }
+            "type": "string",
+            "format": "uri-reference"
           }
         },
         "properties": {
@@ -85,12 +77,8 @@
         "returnTypes": {
           "type": "array",
           "items": {
-            "type": "object",
-            "properties": {
-              "$ref": {
-                "type": "string"
-              }
-            }
+            "type": "string",
+            "format": "uri-reference"
           }
         },
         "arguments": {
@@ -98,8 +86,9 @@
           "items": {
             "type": "object",
             "properties": {
-              "$ref": {
-                "type": "string"
+              "type": {
+                "type": "string",
+                "format": "uri-reference"
               },
               "name": {
                 "type": "string"
@@ -120,6 +109,10 @@
       "properties": {
         "modifiers": {
           "$ref": "#/definitions/modifier"
+        },
+        "type": {
+          "type": "string",
+          "format": "uri-reference"
         }
       }
     },
