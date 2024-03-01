@@ -15,13 +15,28 @@
       "type": "string"
     },
     "files": {
-      "type": "array",
-      "items": {
+      "type": "object",
+      "additionalProperties": {
         "type": "object",
-        "$ref": "#/definitions/module"
+        "$ref": "#/definitions/file"
       }
     }
   },
   "definitions": {
+    "file": {
+      "type": "object",
+      "properties": {
+        "classes": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "object",
+            "$ref": "#/definitions/class"
+          }
+        }
+      }
+    },
+    "class": {},
+    "function": {},
+    "variable": {}
   }
 }

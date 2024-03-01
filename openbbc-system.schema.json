@@ -39,13 +39,6 @@
         "relativePath": {
           "type": "string"
         },
-        "moduleDependencies": {
-          "type": "array",
-          "items": {
-            "type": "string",
-            "$ref": "#/definitions/module"
-          }
-        },
         "functionalStatements": {
           "type": "array",
           "items": {
