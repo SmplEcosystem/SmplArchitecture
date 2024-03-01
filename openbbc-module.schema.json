@@ -35,7 +35,25 @@
         }
       }
     },
-    "class": {},
+    "class": {
+      "type": "object",
+      "properties": {
+        "properties": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "object",
+            "$ref": "#/definitions/variable"
+          }
+        },
+        "methods": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "object",
+            "$ref": "#/definitions/function"
+          }
+        }
+      }
+    },
     "function": {},
     "variable": {}
   }
