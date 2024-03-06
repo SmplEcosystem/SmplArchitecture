@@ -129,15 +129,22 @@
       }
     },
     "interface": {
-      "type": "object",
       "properties": {
-        "name": {
-          "type": "string"
-        },
         "properties": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "object",
+            "$ref": "#/definitions/variable"
+          }
+        },
+        "methodSignatures": {
           "type": "array",
           "items": {
-            "$ref": "#/definitions/variable"
+            "type": "object",
+            "additionalProperties": {
+              "type": "object",
+              "$ref": "#/definitions/functionSignature"
+            }
           }
         }
       }
