@@ -194,6 +194,28 @@
       }
     },
     "type": {
+      "oneOf": [
+        {
+          "type": "string",
+          "format": "uri-reference"
+        },
+        {
+          "type": "object",
+          "properties": {
+            "generic": {
+              "type": "string",
+              "format": "uri-reference"
+            },
+            "typeArguments": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/type"
+              }
+            }
+          }
+        }
+
+      ],
       "type": "string",
       "format": "uri-reference"
     },
