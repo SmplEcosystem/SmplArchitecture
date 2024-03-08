@@ -38,6 +38,19 @@
     "class": {
       "type": "object",
       "properties": {
+        "description": {
+          "oneOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            }
+          ]
+        },
         "implements": {
           "type": "array",
           "items": {
