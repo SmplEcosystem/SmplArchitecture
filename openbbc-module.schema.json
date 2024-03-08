@@ -137,7 +137,8 @@
           "protected",
           "static",
           "async",
-          "abstract"
+          "abstract",
+          "final"
         ]
       }
     },
