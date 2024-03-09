@@ -27,12 +27,31 @@
       "type": "object",
       "properties": {
         "classes": {
-          "type": "object",
-          "additionalProperties": {
-            "type": "object",
-            "$ref": "#/definitions/class"
-          }
+          "$ref": "#/definitions/classes"
+        },
+        "interfaces": {
+          "$ref": "#/definitions/interfaces"
+        },
+        "enums": {
+          "$ref": "#/definitions/enums"
+        },
+        "functions": {
+          "$ref": "#/definitions/functions"
         }
+      }
+    },
+    "classes": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object",
+        "$ref": "#/definitions/class"
+      }
+    },
+    "interfaces": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object",
+        "$ref": "#/definitions/interface"
       }
     },
     "class": {
@@ -77,6 +96,13 @@
             "$ref": "#/definitions/function"
           }
         }
+      }
+    },
+    "functions": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object",
+        "$ref": "#/definitions/function"
       }
     },
     "function": {
@@ -228,7 +254,6 @@
             }
           }
         }
-
       ],
       "type": "string",
       "format": "uri-reference"
