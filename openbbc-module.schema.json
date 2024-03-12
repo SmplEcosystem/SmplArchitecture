@@ -178,13 +178,10 @@
           }
         },
         "methodSignatures": {
-          "type": "array",
-          "items": {
+          "type": "object",
+          "additionalProperties": {
             "type": "object",
-            "additionalProperties": {
-              "type": "object",
-              "$ref": "#/definitions/functionSignature"
-            }
+            "$ref": "#/definitions/functionSignature"
           }
         }
       }
