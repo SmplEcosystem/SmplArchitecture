@@ -149,6 +149,9 @@
         },
         "type": {
           "$ref": "#/definitions/type"
+        },
+        "defaultValue": {
+          "type": "string"
         }
       }
     },
