@@ -1,6 +1,7 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
   "type": "object",
+  "additionalProperties": false,
   "properties": {
     "$schema": {
       "type": "string",
@@ -38,7 +39,8 @@
         "functions": {
           "$ref": "#/definitions/functions"
         }
-      }
+      },
+      "additionalProperties": false
     },
     "classes": {
       "type": "object",
@@ -50,7 +52,6 @@
     "interfaces": {
       "type": "object",
       "additionalProperties": {
-        "type": "object",
         "$ref": "#/definitions/interface"
       }
     },
@@ -85,14 +86,12 @@
         "properties": {
           "type": "object",
           "additionalProperties": {
-            "type": "object",
             "$ref": "#/definitions/variable"
           }
         },
         "methods": {
           "type": "object",
           "additionalProperties": {
-            "type": "object",
             "$ref": "#/definitions/function"
           }
         }
@@ -101,7 +100,6 @@
     "functions": {
       "type": "object",
       "additionalProperties": {
-        "type": "object",
         "$ref": "#/definitions/function"
       }
     },
@@ -176,14 +174,12 @@
         "properties": {
           "type": "object",
           "additionalProperties": {
-            "type": "object",
             "$ref": "#/definitions/variable"
           }
         },
         "methodSignatures": {
           "type": "object",
           "additionalProperties": {
-            "type": "object",
             "$ref": "#/definitions/functionSignature"
           }
         }
@@ -234,11 +230,7 @@
       }
     },
     "type": {
-      "oneOf": [
-        {
-          "type": "string",
-          "format": "uri-reference"
-        },
+      "anyOf": [
         {
           "type": "object",
           "properties": {
@@ -252,7 +244,12 @@
                 "$ref": "#/definitions/type"
               }
             }
-          }
+          },
+          "additionalProperties": false
+        },
+        {
+          "type": "string",
+          "format": "uri-reference"
         }
       ]
     },
