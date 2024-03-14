@@ -94,8 +94,12 @@
           "additionalProperties": {
             "$ref": "#/definitions/function"
           }
+        },
+        "modifiers": {
+          "$ref": "#/definitions/modifiers"
         }
-      }
+      },
+      "additionalProperties": false
     },
     "functions": {
       "type": "object",
@@ -120,7 +124,7 @@
           ]
         },
         "modifiers": {
-          "$ref": "#/definitions/modifier"
+          "$ref": "#/definitions/modifiers"
         },
         "returnTypes": {
           "type": "array",
@@ -137,13 +141,14 @@
             "type": "string"
           }
         }
-      }
+      },
+      "additionalProperties": false
     },
     "variable": {
       "type": "object",
       "properties": {
         "modifiers": {
-          "$ref": "#/definitions/modifier"
+          "$ref": "#/definitions/modifiers"
         },
         "type": {
           "$ref": "#/definitions/type"
@@ -151,9 +156,10 @@
         "defaultValue": {
           "type": "string"
         }
-      }
+      },
+      "additionalProperties": false
     },
-    "modifier": {
+    "modifiers": {
       "type": "array",
       "items": {
         "type": "string",
@@ -183,7 +189,8 @@
             "$ref": "#/definitions/functionSignature"
           }
         }
-      }
+      },
+      "additionalProperties": false
     },
     "functionSignature": {
       "type": "object",
@@ -202,7 +209,7 @@
           ]
         },
         "modifiers": {
-          "$ref": "#/definitions/modifier"
+          "$ref": "#/definitions/modifiers"
         },
         "returnTypes": {
           "type": "array",
@@ -213,7 +220,8 @@
         "arguments": {
           "$ref": "#/definitions/arguments"
         }
-      }
+      },
+      "additionalProperties": false
     },
     "arguments": {
       "type": "array",
@@ -278,7 +286,8 @@
             ]
           }
         }
-      }
+      },
+      "additionalProperties": false
     }
   }
 }
