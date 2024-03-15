@@ -38,6 +38,9 @@
         },
         "functions": {
           "$ref": "#/definitions/functions"
+        },
+        "variables": {
+          "$ref": "#/definitions/variables"
         }
       },
       "additionalProperties": false
@@ -126,6 +129,9 @@
         "modifiers": {
           "$ref": "#/definitions/modifiers"
         },
+        "returnType": {
+          "$ref": "#/definitions/type"
+        },
         "returnTypes": {
           "type": "array",
           "items": {
@@ -142,7 +148,25 @@
           }
         }
       },
+      "oneOf": [
+        {
+          "required": [
+            "returnType"
+          ]
+        },
+        {
+          "required": [
+            "returnTypes"
+          ]
+        }
+      ],
       "additionalProperties": false
+    },
+    "varables": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/variable"
+      }
     },
     "variable": {
       "type": "object",
@@ -171,7 +195,10 @@
           "static",
           "async",
           "abstract",
-          "final"
+          "final",
+          "const",
+          "var",
+          "let"
         ]
       }
     },
