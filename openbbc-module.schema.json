@@ -167,8 +167,8 @@
       "additionalProperties": false
     },
     "variables": {
-      "type": "array",
-      "items": {
+      "type": "object",
+      "additionalProperties": {
         "$ref": "#/definitions/variable"
       }
     },
