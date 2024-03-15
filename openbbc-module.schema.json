@@ -278,10 +278,18 @@
               "format": "uri-reference"
             },
             "typeArguments": {
-              "type": "array",
-              "items": {
-                "$ref": "#/definitions/type"
-              }
+              "anyOf": [
+                {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/definitions/type"
+                  }
+                },
+                {
+                  "type": "string",
+                  "format": "uri-reference"
+                }
+              ]
             }
           },
           "additionalProperties": false
@@ -304,12 +312,20 @@
         "items": {
           "type": "array",
           "items": {
-            "oneOf": [
+            "anyOf": [
               {
                 "type": "string"
               },
               {
-                "type": "number"
+                "type": "object",
+                "properties": {
+                  "name": {
+                    "type": "string"
+                  },
+                  "value": {
+                    "type": "string"
+                  }
+                }
               }
             ]
           }
