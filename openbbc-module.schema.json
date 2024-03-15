@@ -293,17 +293,14 @@
       ]
     },
     "enums": {
-      "type": "array",
-      "items": {
+      "type": "object",
+      "additionalProperties": {
         "$ref": "#/definitions/enum"
       }
     },
     "enum": {
       "type": "object",
       "properties": {
-        "name": {
-          "type": "string"
-        },
         "items": {
           "type": "array",
           "items": {
