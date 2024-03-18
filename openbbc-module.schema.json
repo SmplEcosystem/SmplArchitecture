@@ -182,17 +182,6 @@
           "$ref": "#/definitions/type"
         },
         "defaultValue": {
-          "anyOf": [
-            {
-              "type": "string"
-            },
-            {
-              "type": "number"
-            },
-            {
-              "type": "boolean"
-            }
-          ]
         }
       },
       "additionalProperties": false
