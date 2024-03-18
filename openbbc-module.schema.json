@@ -182,7 +182,14 @@
           "$ref": "#/definitions/type"
         },
         "defaultValue": {
-          "type": "string"
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "number"
+            }
+          ]
         }
       },
       "additionalProperties": false
