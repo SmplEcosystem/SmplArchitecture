@@ -248,10 +248,25 @@
             "$ref": "#/definitions/type"
           }
         },
+        "returnType": {
+          "$ref": "#/definitions/type"
+        },
         "arguments": {
           "$ref": "#/definitions/arguments"
         }
       },
+      "oneOf": [
+        {
+          "required": [
+            "returnType"
+          ]
+        },
+        {
+          "required": [
+            "returnTypes"
+          ]
+        }
+      ],
       "additionalProperties": false
     },
     "arguments": {
