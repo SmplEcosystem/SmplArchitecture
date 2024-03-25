@@ -3,26 +3,26 @@
   "type": "object",
   "properties": {
     "systems": {
-      "type": "array",
-      "items": {
-        "type": "object"
-      }
-    }
-  },
-  "definitions": {
-    "module": {
       "type": "object",
-      "properties": {
-        "type": {
-          "type": "string"
-        },
-        "name": {
-          "type": "string"
-        },
-        "description": {
-          "type": "string"
-        },
-        "archDoc": {
+      "additionalProperties": {
+        "type": "object",
+        "properties": {
+          "description": {
+            "type": "string"
+          },
+          "functionalStatements": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            ]
+          }
         }
       }
     }
