@@ -207,6 +207,12 @@
     },
     "interface": {
       "properties": {
+        "extends": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/type"
+          }
+        },
         "properties": {
           "type": "object",
           "additionalProperties": {
